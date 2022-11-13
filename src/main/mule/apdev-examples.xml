@@ -35,6 +35,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="goodbyeFlow" doc:id="772e9995-0d64-4e68-b5a6-ed57029f8495" >
 		<http:listener doc:name="GET/goodbye" doc:id="896a014f-7133-4b25-9b8e-c80e879b80c7" config-ref="HTTP_Listener_config" path="/goodbye" allowedMethods="GET"/>
 		<set-payload value='#[upper("Goodbye") ++ " " ++ (attributes.queryParams.fullName default "Maxine")]' doc:name="Goodbye" doc:id="45855bdb-9e18-4ebd-afee-2177ca8fa3cf" />
-		<logger level="INFO" doc:name="Logger" doc:id="0372624f-b149-402d-9f38-67005c303ea1" message="#[attributes.queryParams.fullName]"/>
+		<logger level="INFO" doc:name="Logger- testing " doc:id="0372624f-b149-402d-9f38-67005c303ea1" message="#[attributes.queryParams.fullName]"/>
 	</flow>
 </mule>
