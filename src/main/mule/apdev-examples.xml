@@ -30,6 +30,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	"fullName" : attributes.queryParams.fname
 }]]]></http:query-params>
 		</http:request>
+		<logger level="INFO" doc:name="dummylogger" doc:id="f0c88b8f-ae4e-4656-bbe2-e51c12778e12" message="DummyLogger"/>
 		<logger level="INFO" doc:name="fullName" doc:id="aa5c822e-ef05-4242-8b5f-7ee9fdd5f4bb" message="#['\nMessage:' ++ payload]"/>
 	</flow>
 	<flow name="goodbyeFlow" doc:id="772e9995-0d64-4e68-b5a6-ed57029f8495" >
